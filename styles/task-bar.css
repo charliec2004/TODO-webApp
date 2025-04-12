@@ -26,6 +26,8 @@
   margin-left: 5px;
   margin-right: 5px;
   user-select: none;  
+
+  max-height: 50px; /* Limit height to prevent overflow  not sure if this works yet!!!!!!!!!!!!!!!!!!*/
 }
 
 .subtask {
