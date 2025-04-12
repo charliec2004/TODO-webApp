@@ -3,9 +3,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f44336;
-  color: white;
+  background-color: white;
   padding: 5px;
   position: sticky; /* stay at the bottom */
   bottom: 0;
+  padding-bottom: 10px;
+}
+
+.by-line-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px, 8px;
+
+  color: #090909;
+  border-radius: 0.5em;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  transition: all 0.3s;
+  box-shadow:
+    6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px;
+  user-select: none;
+}
+
+.by-line-wrapper:hover {
+  font-size: 1.03em;
+  box-shadow:
+    -6px -6px 12px #c5c5c5,
+    6px 6px 12px #ffffff;
+}
+
+.by-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6em;
+  color: black;
+  margin: 0px;
 }
