@@ -20,19 +20,24 @@
   cursor: pointer;
   border: 1px solid #f5f5f5;
   /* border-left: 4px solid #d70000; */ /* Uncomment if you want a left border for priority*/
-  transition: all 0.3s;
   box-shadow:
     6px 6px 12px #c5c5c5,
     -6px -6px 12px #ffffff;
   font-size: 1em;
   padding: 12px;
   cursor: pointer;
-  transition: background-color 0.15s, font-size 0.15s, box-shadow 0.15s;
+  transition: background-color 0.15s ease, font-size 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
   margin-left: 5px;
   margin-right: 5px;
   user-select: none;  
-
   max-height: 53px; /* Limit height to prevent overflow  not sure if this works yet!!!!!!!!!!!!!!!!!!*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .subtask {
@@ -41,10 +46,10 @@
 
 .task:hover, .subtask:hover {
   font-size: 1.1em;
-}
-
-.task:hover .checkbox, .subtask:hover .checkbox {
-  transform: scale(1.1);
+  transform: scale(1.01);
+  & .checkbox {
+    transform: scale(1.1);
+  }
 }
 
 .task:active, .subtask:active {
@@ -70,10 +75,10 @@
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+  transition: transform 0.15s ease;
 }
 
 .task-label {
-  display: inline-block;
   vertical-align: middle;
   margin-left: 3px;
   font-size: 1em;
@@ -82,5 +87,16 @@
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.due {
+  align-items: center;
+  justify-content: end;
+  margin: 0;
+  margin-left: auto; /* This pushes the element to the right */
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  color: #090909;
 }
 
