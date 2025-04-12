@@ -24,47 +24,12 @@ body {
   overflow: hidden;
 }
 
-/* Header section */
-.header {
-  flex: 0 0 auto;
-  padding: 15px;
-  background-color: #4CAF50;
-  color: white;
-}
-
 /* Content section */
 .content {
   display: flex;
   flex: 1;
   background-color: #2196F3;
   color: white;
-}
-
-/* Navigation */
-nav {
-  flex: 0 0 25%;
-  padding: 15px;
-  background-color: #d136f4;
-}
-
-/* Items container */
-.items {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 15px;
-  background-color: #f3db21;
-}
-
-/* Footer section */
-.footer {
-  flex: 0 0 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f44336;
-  color: white;
-  padding: 5px;
 }
 
 /* Responsive design */
@@ -75,7 +40,13 @@ nav {
     border: none;
   }
 
-  nav {
-    flex: 0 0 35%;
+  .task-bar {
+    flex: 0 0 1;
+    padding: 10px;
+    background-color: #f3db21;
+  }
+
+  .content nav {
+    flex: 0 0 35% !important;
   }
 }

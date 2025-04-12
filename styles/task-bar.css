@@ -1,0 +1,35 @@
+/* Items container */
+.task-bar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f3db21;
+}
+
+
+.task, .subtask {
+  padding: 12px;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s, font-size 0.15s;
+  margin-left: 5px;
+  margin-right: 5px;
+  user-select: none;  
+}
+
+.subtask {
+  margin-left: 30px;
+}
+
+.task:hover, .subtask:hover {
+  background-color: #ececec;
+  font-size : 1.05em;
+}
+
+.task:active, .subtask:active {
+  background-color: #dfdfdf;
+}

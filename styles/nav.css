@@ -1,0 +1,34 @@
+/* Navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 0 0 28%; /* Adjusts size of the nav bar*/
+  padding: 10px 3px;
+  background-color: #d136f4;
+}
+
+.tab, .subtab {
+  padding: 12px;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s, font-size 0.15s;
+  margin-left: 5px;
+  margin-right: 5px;
+  user-select: none;  
+}
+
+.tab:hover, .subtab:hover {
+  background-color: #ececec;
+  font-size : 1.05em;
+}
+
+.tab:active, .subtab:active {
+  background-color: #dfdfdf;
+}
+
+.subtab {
+  margin-left: 30px;
+}
