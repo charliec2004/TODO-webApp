@@ -1,20 +1,77 @@
 .header {
-  flex: 0 0 auto;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space items evenly */
+  padding: 10px; /* Optional: Add padding */
+  background-color: white; /* Optional: Set background color */
+  border-bottom: 1px solid #e6e6e6; /* Optional: Add a bottom border */
+}
+
+.header-left,
+.header-middle,
+.header-right {
+  flex: 1; /* Make all sections take up equal space */
+  display: flex; /* Optional: Use flexbox for child alignment */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Center content horizontally */
+}
+
+.header-left {
+  margin-left: 20px;
+  height: 100%;
+  width: 100%;  /* Set a fixed height */
+  max-width: 80px;   /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures image fits within dimensions */
+  padding: 0px;  /* Add some spacing around the logo */
+}
+
+.header-middle {
   display: flex;
-  padding: 10px 5px;
-  flex-shrink: 0;
-  flex-grow: 0;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
-  background-color: white;
-  border: 1px solid #e6e6e6;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  margin-right: 20px; /* Optional: Add right margin */
+}
+
+.plus-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Set a fixed width for the container */
+  height: 30px; /* Set a fixed height for the container */
+  border-radius: 15px; /* Make it circular */
+  padding: 5px; /* Add some padding */
+  background-color: #f5f5f5; /* Optional: Set background color */
+  box-shadow:
+  6px 6px 12px #c5c5c5,
+  -6px -6px 12px #ffffff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.plus-wrapper:hover {
+  transform: scale(1.01);
+}
+
+.plus-wrapper:active {
+  color: #666;
+  box-shadow:
+    0px 0px 0px #c5c5c5,
+    0px 0px 0px #ffffff,
+    inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
 }
 
 .logo {
-  margin-left: 20px;
-  height: 40px;  /* Set a fixed height */
-  width: auto;   /* Maintain aspect ratio */
-  object-fit: contain; /* Ensures image fits within dimensions */
-  padding: 5px;  /* Add some spacing around the logo */
+  margin-left: 0px;
+  width: 100%; /* Set a fixed width */
+  object-fit: contain;
+  height: 100%;  /* Set a fixed height */
+
 }
 

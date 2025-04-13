@@ -1,9 +1,10 @@
 /* Navigation */
 nav {
+  position: relative; /* Ensure the nav container is the positioning context */
   display: flex;
   flex-direction: column;
   gap: 15px;
-  flex: 0 0 28%; /* Adjusts size of the nav bar*/
+  flex: 0 0 28%; /* Adjusts size of the nav bar */
   padding: 10px 15px;
   background-color: white;
   border-right: 1px solid #e6e6e6;
@@ -67,4 +68,5 @@ nav {
 #Home:active {
   color: #6eb9eb;
 }
+
 

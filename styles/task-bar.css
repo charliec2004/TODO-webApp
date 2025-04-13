@@ -19,7 +19,7 @@
   background-color: #f5f5f5;
   cursor: pointer;
   border: 1px solid #f5f5f5;
-  /* border-left: 4px solid #d70000; */ /* Uncomment if you want a left border for priority*/
+  /* border-left: 4px solid #00d727; Uncomment if you want a left border for priority */
   box-shadow:
     6px 6px 12px #c5c5c5,
     -6px -6px 12px #ffffff;
@@ -89,10 +89,50 @@
   cursor: pointer;
 }
 
+.task-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between settings and due date */
+}
+
+.settings-container {
+  width: 25px;   /* Set a fixed width for the container */
+  height: 25px;  /* Set a fixed height for the container */
+  display: flex; /* Optional: Use flexbox for alignment */
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking of the settings container */
+  border-radius: 15px;
+  padding: 5px;
+  transition: background-color 0.15s ease;
+}
+
+.setting {
+  object-fit: contain; /* Ensures the image scales down to fit within the container */
+  width: 100%;         /* Make the image fill the container's width */
+  height: 100%;        /* Make the image fill the container's height */   /* Set a maximum height for the container */
+}
+
+.settings-container:hover {
+  background-color: #d1d1d1; /* Optional: Change background color on hover */
+  cursor: pointer; /* Optional: Change cursor to pointer on hover */
+  box-shadow:
+    inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+}
+
+.settings-container:active {
+  background-color: #b1b1b1; /* Optional: Change background color on active */
+  box-shadow:
+    inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+}
+
 .due {
   align-items: center;
   justify-content: end;
   margin: 0;
+  margin-right: -5px;
   margin-left: auto; /* This pushes the element to the right */
   display: flex;
   align-items: center;
