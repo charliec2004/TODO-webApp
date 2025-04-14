@@ -1,7 +1,14 @@
+import { addTask } from './task-list.js';
+
 const openNewTask = document.getElementById('open-modal');
 const closeNewTask = document.getElementById('close-modal');
 const modal = document.getElementById('new-task-modal');
 const cancelTask = document.getElementById('cancel-task');
+const saveButton = document.getElementById("save-task");
+const inputName = document.getElementById('task-name');
+const inputDueDate = document.getElementById('due-date');
+
+
 
 // Open the modal
 openNewTask.addEventListener('click', () => {
@@ -24,5 +31,21 @@ window.addEventListener('click', (e) => {
 cancelTask.addEventListener('click', () => {
     modal.classList.remove('open');
 });
+
+
+// Click Save
+saveButton.addEventListener("click", () => {
+    const name = inputName.value.trim();
+    const dueDate = inputDueDate.value;
+  
+    if (!name || !dueDate) return;
+  
+    addTask(name, dueDate);
+    modal.classList.remove("open");
+    inputName.value = "";
+    inputDueDate.value = "";
+  });
+
+
 
 

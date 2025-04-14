@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="styles/task-bar.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/modal.css">
+  <link rel="stylesheet" href="styles/settings.css">
 </head>
 <body>
   <div class="main-box">
@@ -44,9 +45,10 @@
         <div class="tab">Work</div>
       </nav>
 
-      <!-- Task bar -->
-      <div class="task-bar">
-        <div class="task">
+      <!-- Task bar list-->
+      <ul class="task-bar">
+        <!-- One task -->
+        <li class="task">
           <div class="task-left">
             <input type="checkbox" id="task-checkbox"  class="checkbox">
             <label for="task-checkbox" class="task-name">Task Name</label>
@@ -58,12 +60,12 @@
             <div class="due-date-wrapper">
               <p class="due-date">Today 6:00 pm</p>
             </div>
-            <div class="settings-wrapper">
+            <div class="settings-wrapper" id="settings">
               <img src="settings.svg">
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
 
     <!-- Footer -->
@@ -88,6 +90,9 @@
     </div>
   </div>
 
-  <script src="new-task.js"></script>
-</body>
+  <script type="module" src="js/task-list.js"></script>
+  <script type="module" src="js/new-task.js"></script>
 </html>
+
+
+
