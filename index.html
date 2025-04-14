@@ -16,6 +16,7 @@
 </head>
 <body>
   <div class="main-box">
+    <!-- Header -->
     <header class="header">
       <div class="header-left">
         <img src="TODO.png" class="logo"></img>
@@ -30,9 +31,8 @@
       </div>
     </header>
 
-    <!-- Container for the navigation bar and task bar -->
+    <!-- Content -->
     <div class="content">
-
       <!-- Navigation bar -->
       <nav>
         <div class="tab" id="Home">Home</div>
@@ -45,111 +45,27 @@
 
       <!-- Task bar -->
       <div class="task-bar">
-
         <div class="task">
-
           <div class="task-left">
-            <input type="checkbox" class="checkbox" id="task1"></input>
-            <label for="task1" class="task-label">Clean Kitchen</label>
+            <input type="checkbox" id="task-checkbox"  class="checkbox">
+            <label for="task-checkbox" class="task-name">Task Name</label>
           </div>
-
           <div class="task-middle">
-
+            <p></p>
           </div>
-
           <div class="task-right">
-            <p class="due">Due: April 12th</p>
-            <div class="settings-container">
-              <img src="settings.svg" class="settings"></img>
+            <div class="due-date-wrapper">
+              <p class="due-date">Today 6:00 pm</p>
             </div>
-          </div> 
-          
-        </div>
-
-        <div class="subtask">
-
-          <div class="task-left">
-            <input type="checkbox" class="checkbox" id="task1"></input>
-            <label for="task1" class="task-label">Do Dishes</label>
-          </div>
-
-          <div class="task-middle">
-
-          </div>
-
-          <div class="task-right">
-            <!-- <p class="due">Due: April 12th</p> -->
-            <div class="settings-container">
-              <img src="settings.svg" class="settings"></img>
+            <div class="settings-wrapper">
+              <img src="settings.svg">
             </div>
-          </div> 
-
+          </div>
         </div>
-
-        <div class="subtask">
-
-          <div class="task-left">
-            <input type="checkbox" class="checkbox" id="task1"></input>
-            <label for="task1" class="task-label">Mop Floors</label>
-          </div>
-
-          <div class="task-middle">
-
-          </div>
-
-          <div class="task-right">
-            <!-- <p class="due">Due: April 12th</p> -->
-            <div class="settings-container">
-              <img src="settings.svg" class="settings"></img>
-            </div>
-          </div> 
-
-        </div>
-
-        <div class="task">
-
-          <div class="task-left">
-            <input type="checkbox" class="checkbox" id="task1"></input>
-            <label for="task1" class="task-label">Walk the dog</label>
-          </div>
-
-          <div class="task-middle">
-
-          </div>
-
-          <div class="task-right">
-            <p class="due">Due: April 12th</p>
-            <div class="settings-container">
-              <img src="settings.svg" class="settings"></img>
-            </div>
-          </div> 
-          
-        </div>
-
-        <div class="task">
-
-          <div class="task-left">
-            <input type="checkbox" class="checkbox" id="task1"></input>
-            <label for="task1" class="task-label">Build Garage Shelves</label>
-          </div>
-
-          <div class="task-middle">
-
-          </div>
-
-          <div class="task-right">
-            <p class="due">Due: April 30th</p>
-            <div class="settings-container">
-              <img src="settings.svg" class="settings"></img>
-            </div>
-          </div> 
-          
-        </div>
-        
       </div>
-
     </div>
 
+    <!-- Footer -->
     <div class="footer">
       <div class="by-line-wrapper">
         <p class="by-line">Made by Charlie Conner</p>

@@ -15,7 +15,7 @@ body {
 /* Main container */
 .main-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack elements vertically */
   width: 90%;
   height: 90vh;
   max-width: 1200px;
@@ -29,11 +29,9 @@ body {
 
 /* Content section */
 .content {
+  flex: 1; /* Content takes up the remaining space */
   display: flex;
-  flex: 1;
-  background-color: #2196F3;
-  color: white;
-  overflow: hidden;
+  background-color: white; /* Optional: Set background color */
 }
 
 /* Responsive design */

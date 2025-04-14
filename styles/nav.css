@@ -38,10 +38,16 @@ nav {
 
 .subtab {
   margin-left: 30px;
+  font-size: 0.85em;
 }
 
-.tab:hover, .subtab:hover {
+.tab:hover{
   font-size : 1.2em;
+  transform: scale(1.01);
+}
+
+.subtab:hover {
+  font-size : 0.95em;
   transform: scale(1.01);
 }
 
@@ -54,19 +60,5 @@ nav {
     inset -4px -4px 12px #ffffff;
 }
 
-#Home {
-  font-weight: bold;
-  font-size: 1.35em;
-  color: #2498E6;
-  transition: font-size 0.15s ease, color 0.15s ease;
-}
-
-#Home:hover {
-  font-size: 1.45em;
-}
-
-#Home:active {
-  color: #6eb9eb;
-}
 
 
