@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles/nav.css">
   <link rel="stylesheet" href="styles/task-bar.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/modal.css">
 </head>
 <body>
   <div class="main-box">
@@ -24,7 +25,7 @@
       <div class="header-middle"></div>
       <div class="header-right">
         <div class="new-container">
-          <div class="plus-wrapper">
+          <div class="plus-wrapper" id="open-modal">
             <img src="plus.svg" class="new"></img>
           </div>
         </div>
@@ -72,5 +73,16 @@
       </div>
     </div>
   </div>
+
+  <!-- New Task Modal -->
+  <div class="modal" id="new-task-modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-modal">&times;</span>
+      <h2>Create a New Task</h2>
+      <!-- Other modal content here -->
+    </div>
+  </div>
+
+  <script src="new-task.js"></script>
 </body>
 </html>
