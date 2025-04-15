@@ -42,9 +42,10 @@ saveButton.addEventListener("click", () => {
   
     addTask(name, dueDate);
     modal.classList.remove("open");
-    inputName.value = "";
+    inputName.value = ""; //reset modal input values
     inputDueDate.value = "";
   });
+
 
 
 

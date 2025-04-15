@@ -115,7 +115,115 @@
   background-color: #1B5E20; /* Darker green */
 }
 
+/* New Tab Modal Styling */
+/* This targets the modal with id="new-tab-modal" */
+.modal#new-tab-modal {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden; /* Hide modal initially */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal#new-tab-modal.open {
+  opacity: 1;
+  visibility: visible; /* Make modal visible when open */
+  z-index: 999;
+}
+
+.modal#new-tab-modal .modal-content {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: start; /* Align content to start horizontally */
+  gap: 10px; /* Space between elements */
+  position: relative; /* Anchor for absolute elements like close button */
+  background-color: white;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal#new-tab-modal .close-button {
+  position: absolute; /* Position relative to modal-content */
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#tab-name {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.modal#new-tab-modal .modal-action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between; /* Space between buttons */
+  padding: 0px 90px;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.modal#new-tab-modal .modal-action-buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#cancel-tab {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+#cancel-tab:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+
+#cancel-tab:active {
+  background-color: #b71c1c; /* Darker red */
+}
+
+#save-tab {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+#save-tab:hover {
+  background-color: #388E3C; /* Darker green */
+}
+
+#save-tab:active {
+  background-color: #1B5E20; /* Darker green */
+}
 
 
 

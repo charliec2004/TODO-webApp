@@ -21,13 +21,13 @@
     <!-- Header -->
     <header class="header">
       <div class="header-left">
-        <img src="TODO.png" class="logo"></img>
+        <img src="assets/TODO.png" class="logo"></img>
       </div>
       <div class="header-middle"></div>
       <div class="header-right">
         <div class="new-container">
           <div class="plus-wrapper" id="open-modal">
-            <img src="plus.svg" class="new"></img>
+            <img src="assets/plus.svg" class="new"></img>
           </div>
         </div>
       </div>
@@ -39,16 +39,17 @@
       <nav>
         <div class="tab" id="Home">Home</div>
         <div class="tab">Projects</div>
-        <div class="subtab">Food Deal App</div>
-        <div class="subtab">LockedIn App</div>
+        <!-- <div class="subtab">Food Deal App</div>
+        <div class="subtab">LockedIn App</div> -->
         <div class="tab">School</div>
         <div class="tab">Work</div>
+        <div class="new-tab-ghost" id="open-tab-modal">New Tab &#43;</div>
       </nav>
 
       <!-- Task bar list-->
       <ul class="task-bar">
         <!-- One task -->
-        <li class="task">
+        <!-- <li class="task">
           <div class="task-left">
             <input type="checkbox" id="task-checkbox"  class="checkbox">
             <label for="task-checkbox" class="task-name">Task Name</label>
@@ -61,10 +62,10 @@
               <p class="due-date">Today 6:00 pm</p>
             </div>
             <div class="settings-wrapper" id="settings">
-              <img src="settings.svg">
+              <img src="assets/settings.svg">
             </div>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -90,8 +91,22 @@
     </div>
   </div>
 
+  <!-- New Tab Modal -->
+  <div class="modal" id="new-tab-modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-tab-modal">&times;</span>
+      <h2>Create a New Tab</h2>
+      <input type="text" id="tab-name" placeholder="Tab Name">
+      <div class="modal-action-buttons">
+        <button id="cancel-tab">Cancel</button>
+        <button id="save-tab">Save Tab</button>
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="js/task-list.js"></script>
   <script type="module" src="js/new-task.js"></script>
+  <script type="module" src="js/new-tab.js"></script>
 </html>
 
 

@@ -15,12 +15,18 @@ export function addTask(name, dueDate) {
   renderTask(task);
 }
 
+
+/*
+Could / should make multiple taskLists!!! and then add and render each item into the task bar when the right tab is selected!!!
+need to index each tab though becuase who knows how many are created... could index each tab and each task list together and always work with the same indexs
+*/
 function renderTask(task) {
   const taskBar = document.querySelector(".task-bar");
 
-  const li = document.createElement("li");
-  li.classList.add("task");
+  const li = document.createElement("li"); // creates new list html element in the js code
+  li.classList.add("task"); // adds the css class .task styling to the list
 
+  // sets the inner html of the list -- to be appended to the task bar
   li.innerHTML = `
     <div class="task-left">
         <input type="checkbox" id="checkbox-${task.id}" class="checkbox">
@@ -37,10 +43,11 @@ function renderTask(task) {
             })}</p>
         </div>
         <div class="settings-wrapper">
-            <img src="settings.svg">
+            <img src="assets/settings.svg">
         </div>
     </div>
   `;
 
-  taskBar.appendChild(li);
+  taskBar.appendChild(li); // appends to new coded list element to the taskBar
+  console.log(taskList); // logs the taskList for some reason
 }
