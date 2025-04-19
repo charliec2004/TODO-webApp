@@ -1,7 +1,7 @@
-.modal {
+.modal { /* This targets space outside of modal */
   position: fixed;
   opacity: 0;
-  visibility: hidden; /* Hide modal initially */
+  visibility: none; /* Hide modal initially */
   top: 0;
   left: 0;
   right: 0;
@@ -17,7 +17,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.modal-content {
+.modal-content { /* This targets the modal content */
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   justify-content: center; /* Center content vertically */
@@ -32,10 +32,16 @@
   max-width: 500px;
 }
 
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
 .close-button {
   position: absolute; /* Position relative to modal-content */
-  top: 10px; /* Adjust as needed */
-  left: 10px; /* Adjust as needed */
+  top: 0px; /* Adjust as needed */
+  left: 8px; /* Adjust as needed */
   background-color: transparent;
   padding: 5px;
   border-radius: 50px;
@@ -50,182 +56,93 @@
   z-index: 999;
 }
 
-#task-name {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border-radius: 5px;
+.task-name-input{
+  font-size: 1rem;
+  padding: 5px;
+  color: #333;
   border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: text;
 }
 
-#due-date {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border-radius: 5px;
+.task-date{
+  font-family: Roboto;
+  font-size: 1rem;
+  padding: 5px;
+  color: #333;
   border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: text;
+  margin: 5px 0px;
 }
 
-.modal-action-buttons {
+.task-priority{
+  font-size: 1rem;
+  color: #333;
+  border-radius: 5px;
+  width: 100%;
+  cursor: text;
+}
+.task-priority select{
+  font-size: 0.9rem;
+  padding: 3px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* ___________ BUTTONS ___________*/ 
+.modal-buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 90px; /* Space between buttons */
-  width: 100%;
-  height: 100%;
-  margin-top: 10px;
+  /* Space between buttons */
+  padding: 0px 90px;
+  gap: 20px;
+  width: 100%; /* Container takes full width of the modal */
+  height: 100%; /* Container takes full height avaibale to it */
+  margin-top: 10px; /* Space between buttons and content */
 }
 
 .modal-action-buttons button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#cancel-task {
-  background-color: #f44336; /* Red */
-  color: white;
-}
-
-#cancel-task:hover {
-  background-color: #d32f2f; /* Darker red */
-}
-
-#cancel-task:active {
-  background-color: #b71c1c; /* Darker red */
 }
 
 #save-task {
-  background-color: #4CAF50; /* Green */
-  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: white;
+  color: rgb(5, 155, 0);
+  border: 2px solid rgb(5, 155, 0);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 #save-task:hover {
-  background-color: #388E3C; /* Darker green */
+  background-color: rgb(5, 155, 0);
+  color: white;
+  border: 2px solid rgb(5, 155, 0);
 }
 
-#save-task:active {
-  background-color: #1B5E20; /* Darker green */
-}
-
-/* New Tab Modal Styling */
-/* This targets the modal with id="new-tab-modal" */
-.modal#new-tab-modal {
-  position: fixed;
-  opacity: 0;
-  visibility: hidden; /* Hide modal initially */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.modal#new-tab-modal.open {
-  opacity: 1;
-  visibility: visible; /* Make modal visible when open */
-  z-index: 999;
-}
-
-.modal#new-tab-modal .modal-content {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: start; /* Align content to start horizontally */
-  gap: 10px; /* Space between elements */
-  position: relative; /* Anchor for absolute elements like close button */
-  background-color: white;
-  border-radius: 15px;
-  padding: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 500px;
-}
-
-.modal#new-tab-modal .close-button {
-  position: absolute; /* Position relative to modal-content */
-  top: 10px; /* Adjust as needed */
-  left: 10px; /* Adjust as needed */
-  background-color: transparent;
-  padding: 5px;
-  border-radius: 50px;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#tab-name {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+#cancel-task {
   font-size: 16px;
-}
-
-.modal#new-tab-modal .modal-action-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between; /* Space between buttons */
-  padding: 0px 90px;
-  width: 100%;
-  height: 100%;
-  margin-top: 10px;
-}
-
-.modal#new-tab-modal .modal-action-buttons button {
+  font-weight: 600;
+  background-color: white; /* Green */
+  color: #b00000;
+  border: 2px solid #b00000;
   padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
-
-#cancel-tab {
-  background-color: #f44336; /* Red */
+#cancel-task:hover {
+  background-color: #b00000;
   color: white;
+  border: 2px solid #b00000;
 }
-
-#cancel-tab:hover {
-  background-color: #d32f2f; /* Darker red */
-}
-
-#cancel-tab:active {
-  background-color: #b71c1c; /* Darker red */
-}
-
-#save-tab {
-  background-color: #4CAF50; /* Green */
-  color: white;
-
-}
-
-#save-tab:hover {
-  background-color: #388E3C; /* Darker green */
-}
-
-#save-tab:active {
-  background-color: #1B5E20; /* Darker green */
-}
-
 
 
 

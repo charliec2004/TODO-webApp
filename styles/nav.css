@@ -33,7 +33,72 @@ nav {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  position: relative;
+}
 
+.tab-name {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+#tab-delete-button {
+  font-size: 0.9rem;
+  padding: 3px 8px;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  border-radius: 50%;
+  box-shadow:
+    6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+#tab-delete-button:hover {
+  color: #666;
+  opacity: 1;
+}
+
+#tab-delete-button:active {
+  background-color: #e4e4e4;
+  box-shadow:
+    0px 0px 0px #c5c5c5,
+    0px 0px 0px #ffffff,
+    inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+}
+
+.tab-delete-button {
+  font-size: 0.9rem;
+  padding: 3px 8px;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  border-radius: 50%;
+  box-shadow:
+    6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+.tab-delete-button:hover {
+  color: #666;
+  opacity: 1;
+}
+
+.tab-delete-button:active {
+  background-color: #e4e4e4;
+  box-shadow:
+    0px 0px 0px #c5c5c5,
+    0px 0px 0px #ffffff,
+    inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
 }
 
 .subtab {
@@ -99,5 +164,9 @@ nav {
     inset -4px -4px 12px #ffffff;
 }
 
-
-
+.tab.selected {
+  color: #4CAF50; /* Green color for selected tab */
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-left: 3px solid #4CAF50;
+}

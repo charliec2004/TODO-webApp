@@ -38,7 +38,7 @@
   margin-right: 20px; /* Optional: Add right margin */
 }
 
-.plus-wrapper {
+.icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,13 +52,14 @@
   -6px -6px 12px #ffffff;
   cursor: pointer;
   transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  margin-left: 10px;
 }
 
-.plus-wrapper:hover {
+.icon-wrapper:hover {
   transform: scale(1.01);
 }
 
-.plus-wrapper:active {
+.icon-wrapper:active {
   color: #666;
   box-shadow:
     0px 0px 0px #c5c5c5,
